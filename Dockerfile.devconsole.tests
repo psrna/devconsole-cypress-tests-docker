@@ -1,0 +1,19 @@
+# This image is used to simplify running devconsole tests
+#
+#
+#FROM cypress/browsers:node14.16.0-chrome89-ff86
+FROM cypress/included:7.2.0
+
+USER root
+
+COPY --chown=0:0 devconsole.tests.entrypoint.sh /tmp/entrypoint.sh
+RUN chmod +x /tmp/entrypoint.sh
+
+RUN mkdir -p /src/console
+COPY . /src/console
+
+WORKDIR /src/console/frontend
+RUN yarn install
+
+
+ENTRYPOINT [ "/tmp/entrypoint.sh" ]
