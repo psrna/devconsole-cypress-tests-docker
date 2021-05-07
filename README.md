@@ -2,7 +2,7 @@
 
 ## How to run?
 
-1. set your cluster details in devconsole.test.vars
+1. set your cluster details in [devconsole.test.vars](https://github.com/psrna/devconsole-cypress-tests-docker/blob/main/devconsole.test.vars)
 2. execute 
 ```bash
 docker run -it --env-file ./devconsole.test.vars psrna/devconsole-cypress-tests:4.8.x
