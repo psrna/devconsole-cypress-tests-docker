@@ -1,5 +1,9 @@
 # POC for DevConsole Cypress Tests - Docker
 
+## What is it for?
+
+This image will allow for running DevConsole Cypress Tests against your remote cluster with single command.
+
 ## How to run?
 
 1. set your cluster details in [devconsole.test.vars](https://github.com/psrna/devconsole-cypress-tests-docker/blob/main/devconsole.test.vars)
